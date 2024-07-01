@@ -1,0 +1,31 @@
+{
+    "configMigration": true,
+    "extends": [
+        "config:recommended",
+        ":dependencyDashboard",
+        "helpers:pinGitHubActionDigests",
+        ":pinDevDependencies",
+        ":semanticCommits",
+        ":semanticCommitTypeAll(chore)",
+        ":separateMajorReleases",
+        ":separatePatchReleases",
+        ":automergeAll",
+        ":enableVulnerabilityAlerts",
+        "npm:unpublishSafe",
+        ":docker",
+        "docker:pinDigests",
+        "preview:dockerCompose",
+        "preview:dockerVersions"
+    ],
+    "git-submodules": {
+        "enabled": true
+    },
+    "minimumReleaseAge": "1 day",
+    "packageRules": [
+        {
+            "description": "CI updates must be tagged as `ci`",
+            "matchPaths": [".github/workflows/*.yml", ".github/workflows/*.yaml"],
+            "semanticCommitType": "ci"
+        }
+    ]
+}
