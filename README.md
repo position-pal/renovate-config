@@ -6,6 +6,7 @@ To use this configuration, just add a `renovate.json` file to the root of your r
 
 ```json
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>position-pal/renovate-config"
   ]
