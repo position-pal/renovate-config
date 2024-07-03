@@ -9,7 +9,6 @@
         ":semanticCommitTypeAll(chore)",
         ":separateMajorReleases",
         ":separatePatchReleases",
-        ":automergeAll",
         ":rebaseStalePrs",
         ":enableVulnerabilityAlerts",
         "npm:unpublishSafe",
@@ -18,6 +17,7 @@
         "preview:dockerCompose",
         "preview:dockerVersions"
     ],
+    "automerge": true,
     "git-submodules": {
         "enabled": true
     },
