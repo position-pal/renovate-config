@@ -10,6 +10,7 @@
         ":separateMajorReleases",
         ":separatePatchReleases",
         ":automergeAll",
+        ":rebaseStalePrs",
         ":enableVulnerabilityAlerts",
         "npm:unpublishSafe",
         ":docker",
@@ -21,6 +22,8 @@
         "enabled": true
     },
     "minimumReleaseAge": "1 day",
+    "prConcurrentLimit": 25,
+    "prHourlyLimit": 0,
     "packageRules": [
         {
             "description": "CI updates must be tagged as `ci`",
