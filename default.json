@@ -37,6 +37,14 @@
                 "/^org\\.scala-lang.*/"
             ],
             "semanticCommitScope": "core-deps"
+        },
+        {
+            "description": "PositionPal packages do not wait for a minimum release age and must be scoped as `api-deps`",
+            "matchPackageNames": [
+                "^position[-]?pal.*"
+            ],
+            "minimumReleaseAge": "0 days",
+            "semanticCommitScope": "api-deps"
         }
     ]
 }
