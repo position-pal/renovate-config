@@ -21,9 +21,15 @@
     "git-submodules": {
         "enabled": true
     },
-    "minimumReleaseAge": "1 day",
     "prConcurrentLimit": 25,
     "prHourlyLimit": 0,
+    "hostRules": [
+        {
+            "hostType": "maven",
+            "matchHost": "maven.pkg.github.com",
+            "token": "{{ secrets.GH_PACKAGES_TOKEN }}"
+        }
+    ],
     "packageRules": [
         {
             "description": "CI updates must be tagged as `ci`",
@@ -41,9 +47,8 @@
         {
             "description": "PositionPal packages do not wait for a minimum release age and must be scoped as `api-deps`",
             "matchPackageNames": [
-                "^position[-]?pal.*"
+                "/.*position[-]?pal.*/"
             ],
-            "minimumReleaseAge": "0 days",
             "semanticCommitScope": "api-deps"
         }
     ]
