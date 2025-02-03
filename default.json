@@ -45,18 +45,18 @@
             "semanticCommitScope": "core-deps"
         },
         {
-            "description": "Some PositionPal packages should be scoped as normal `deps`",
-            "matchPackageNames": [
-                "/.*position[-]?pal\\\/local-deployment.*/"
-            ],
-            "semanticCommitScope": "deps"
-        },
-        {
-            "description": "All other PositionPal packages must be scoped as `api-deps`",
+            "description": "PositionPal packages must be scoped as `api-deps`",
             "matchPackageNames": [
                 "/.*position[-]?pal.*/"
             ],
             "semanticCommitScope": "api-deps"
+        },
+        {
+            "description": "Exceptionally, some PositionPal packages should be scoped as normal `deps`",
+            "matchPackageNames": [
+                "/.*position[-]?pal\\\/local-deployment.*/"
+            ],
+            "semanticCommitScope": "deps"
         }
     ]
 }
