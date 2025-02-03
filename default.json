@@ -45,7 +45,14 @@
             "semanticCommitScope": "core-deps"
         },
         {
-            "description": "PositionPal packages do not wait for a minimum release age and must be scoped as `api-deps`",
+            "description": "Some PositionPal packages should be scoped as normal `deps`",
+            "matchPackageNames": [
+                "/.*position[-]?pal\\\/local-deployment.*/"
+            ],
+            "semanticCommitScope": "deps"
+        },
+        {
+            "description": "All other PositionPal packages must be scoped as `api-deps`",
             "matchPackageNames": [
                 "/.*position[-]?pal.*/"
             ],
