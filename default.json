@@ -28,6 +28,12 @@
             "hostType": "maven",
             "matchHost": "maven.pkg.github.com",
             "token": "{{ secrets.GH_PACKAGES_TOKEN }}"
+        },
+        {
+            "matchHost": "ghcr.io",
+            "hostType": "docker",
+            "username": "{{ secrets.GH_CONTAINER_REGISTRY_USER }}",
+            "password": "{{ secrets.GH_CONTAINER_REGISTRY_TOKEN }}"
         }
     ],
     "packageRules": [
